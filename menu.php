@@ -60,6 +60,17 @@
                             </li>
                         </ul>
                     </li>
+					<li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-arrows-v"></i>Corte de Caja<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="cajadetalle.php">Corte del dia</a>
+                            </li>
+                            <li>
+                                <a href="#">Acmulado de Caja</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
