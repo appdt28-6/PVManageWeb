@@ -1,4 +1,8 @@
-<?php echo ""; ?>
+<?php
+
+$admin=	"Admin";
+
+?>
   <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,20 +20,20 @@
                 
                 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $admin;?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
+                        <!--<li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
+                        </li>-->
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                            <a href="http://helpdesk.appdt.info/"><i class="fa fa-fw fa-gear"></i>Soporte</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="logout.php" target="_blank"><i class="fa fa-fw fa-power-off"></i>Salir</a>
                         </li>
                     </ul>
                 </li>
@@ -46,6 +50,7 @@
                     <li>
                         <a href="pagos.php"><i class="fa fa-fw fa-arrow-circle-o-down"></i>Pagos</a>
                     </li>
+					
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>Menu Restaurant <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">

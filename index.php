@@ -1,3 +1,17 @@
+<?php
+session_start();
+?>
+<?php
+if(!isset($_SESSION['admin'])) //para saber si existe o no ya la variable de sesión que se va a crear cuando el usuario se logee
+{ 
+header("location:login.php?**sin-acceso"); 
+}
+else{
+$admin=	$_SESSION['admin'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -82,7 +96,7 @@
                                     date_default_timezone_set('mexico/general');
                                     $fch1=date("Y-m-d")." 00:00:00";
                                     $fch2=date("Y-m-d")." 23:59:59";
-                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' and ventasticket.idProducto=1 ";
+                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' and ventasticket.idProducto=2";
                                   $result = mysql_query($query);
                                   while($row = mysql_fetch_array($result))
                                   {
@@ -92,16 +106,16 @@
                                     mysql_close($link);
 									
                                     ?>
-                                        <div>Comidas Vendidas</div>
+                                        <div>Buffet</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <!--<a href="#">
                                 <div class="panel-footer">
                                     <span class="pull-left"><a href="ventas.php">Ver detalles</a></span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
-                                </div>
+                                </div>-->
                             </a>
                         </div>
                     </div>
@@ -119,7 +133,7 @@
                                     date_default_timezone_set('mexico/general');
                                     $fch1=date("Y-m-d")." 00:00:00";
                                     $fch2=date("Y-m-d")." 23:59:59";
-                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' and ventasticket.idProducto=2 ";
+                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' and ventasticket.idProducto=5";
                                   $result = mysql_query($query);
                                   while($row = mysql_fetch_array($result))
                                   {
@@ -129,16 +143,16 @@
                                     mysql_close($link);
 									
                                     ?>
-                                        <div>Bufets vendidos</div>
+                                        <div>BufFets Niños</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                           <!-- <a href="#">
                                 <div class="panel-footer">
                                     <span class="pull-left">Ver detalles</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
-                                </div>
+                                </div>-->
                             </a>
                         </div>
                     </div>
@@ -156,7 +170,7 @@
                                     date_default_timezone_set('mexico/general');
                                     $fch1=date("Y-m-d")." 00:00:00";
                                     $fch2=date("Y-m-d")." 23:59:59";
-                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' and ventasticket.idProducto=3 ";
+                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' and ventasticket.idProducto=4 ";
                                   $result = mysql_query($query);
                                   while($row = mysql_fetch_array($result))
                                   {
@@ -166,16 +180,16 @@
                                     mysql_close($link);
 									
                                     ?>
-                                        <div>Quesadillas</div>
+                                        <div>P. llevar</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                           <!-- <a href="#">
                                 <div class="panel-footer">
                                     <span class="pull-left">Ver detalles</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
-                                </div>
+                                </div>-->
                             </a>
                         </div>
                     </div>
@@ -193,7 +207,7 @@
                                     date_default_timezone_set('mexico/general');
                                     $fch1=date("Y-m-d")." 00:00:00";
                                     $fch2=date("Y-m-d")." 23:59:59";
-                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' and ventasticket.idProducto=4 ";
+                                  $query = "SELECT SUM(ventasticket.cantidad) as total FROM tickets inner join ventasticket on tickets.idTicket=ventasticket.idTicket where tickets.fecha BETWEEN '$fch1' AND '$fch2' ";
                                   $result = mysql_query($query);
                                   while($row = mysql_fetch_array($result))
                                   {
@@ -203,13 +217,13 @@
                                     mysql_close($link);
 									
                                     ?>
-                                        <div>Para Llevar</div>
+                                        <div>Total</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                          <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left"><a href="ventas.php">Ver detalles</a></span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
