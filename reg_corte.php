@@ -103,8 +103,8 @@
                            Registro de corte de caja
                             <small>al <?php date_default_timezone_set('mexico/general'); echo date("d-m-y"); ?></small>
                         </h1>                  
-     
-                       <a href="index.php">Regresar</a>
+						<a href="pdf/tuto1.php" class="btn btn-default">Imprimir ticket</a>
+                       <a href="index.php">Continuar</a>
                 </div>
                 <!-- /.row -->
 

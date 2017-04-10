@@ -1,10 +1,10 @@
 <?php
-/*$server="localhost";
+$server="localhost";
 $database="pvmanager";
 $dbpass="@ppdt";
 $dbuser="root";
 $link=mysql_connect($server,$dbuser,$dbpass);
-mysql_select_db($database,$link);*/
+mysql_select_db($database,$link);
 
 /*$server="sql10.freemysqlhosting.net";
 $database="sql10151059";
@@ -13,11 +13,11 @@ $dbuser="sql10151059";
 $link=mysql_connect($server,$dbuser,$dbpass);
 mysql_select_db($database,$link);*/
 
-$server="mysql5006.smarterasp.net";
+/*$server="mysql5006.smarterasp.net";
 $database="db_a09b1f_pv";
 $dbpass="@ppDT2016.";
 $dbuser="a09b1f_pv";
-$port = 3306;
+$port = 3306;*/
 
 $link=mysql_connect($server,$dbuser,$dbpass);
 mysql_select_db($database,$link);

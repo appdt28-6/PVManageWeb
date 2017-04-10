@@ -1,15 +1,15 @@
 <?php
 class Database 
 {
-	/*private static $dbName = 'pvmanager' ; 
+	private static $dbName = 'pvmanager' ; 
 	private static $dbHost = 'localhost' ;
 	private static $dbUsername = 'root';
-	private static $dbUserPassword = '@ppdt';*/
+	private static $dbUserPassword = '@ppdt';
 	
-	private static $dbName = 'db_a09b1f_pv' ; 
+	/*private static $dbName = 'db_a09b1f_pv' ; 
 	private static $dbHost = 'mysql5006.smarterasp.net' ;
 	private static $dbUsername = 'a09b1f_pv';
-	private static $dbUserPassword = '@ppDT2016.';
+	private static $dbUserPassword = '@ppDT2016.';*/
 	
 	private static $cont  = null;
 	
