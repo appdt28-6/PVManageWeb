@@ -60,7 +60,7 @@ $admin=	$_SESSION['admin'];
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Panel <small> de control <?php date_default_timezone_set('mexico/general'); echo date("d-m-y"); ?></small>
+                            Panel <small> de control <?php date_default_timezone_set('mexico/general'); echo date("d-m-Y"); ?></small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
